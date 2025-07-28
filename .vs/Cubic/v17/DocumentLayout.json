@@ -1,85 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\work\\Cubic\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{88160649-381D-45BA-82E1-E8B07DB5F70E}|Cubic\\Cubic.csproj|d:\\work\\cubic\\cubic\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88160649-381D-45BA-82E1-E8B07DB5F70E}|Cubic\\Cubic.csproj|solutionrelative:cubic\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88160649-381D-45BA-82E1-E8B07DB5F70E}|Cubic\\Cubic.csproj|d:\\work\\cubic\\cubic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88160649-381D-45BA-82E1-E8B07DB5F70E}|Cubic\\Cubic.csproj|solutionrelative:cubic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3549770-4B76-4FF7-BB74-38510F36891F}|Application\\Application.csproj|d:\\work\\cubic\\application\\mappings\\priceprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3549770-4B76-4FF7-BB74-38510F36891F}|Application\\Application.csproj|solutionrelative:application\\mappings\\priceprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3549770-4B76-4FF7-BB74-38510F36891F}|Application\\Application.csproj|d:\\work\\cubic\\application\\mappings\\itemprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3549770-4B76-4FF7-BB74-38510F36891F}|Application\\Application.csproj|solutionrelative:application\\mappings\\itemprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\work\\Cubic\\Cubic\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Cubic\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\work\\Cubic\\Cubic\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Cubic\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBoAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T10:43:02.088Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\work\\Cubic\\Cubic\\Program.cs",
-              "RelativeDocumentMoniker": "Cubic\\Program.cs",
-              "ToolTip": "D:\\work\\Cubic\\Cubic\\Program.cs",
-              "RelativeToolTip": "Cubic\\Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACIAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:50:55.179Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PriceProfile.cs",
-              "DocumentMoniker": "D:\\work\\Cubic\\Application\\Mappings\\PriceProfile.cs",
-              "RelativeDocumentMoniker": "Application\\Mappings\\PriceProfile.cs",
-              "ToolTip": "D:\\work\\Cubic\\Application\\Mappings\\PriceProfile.cs",
-              "RelativeToolTip": "Application\\Mappings\\PriceProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T21:56:47.58Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ItemProfile.cs",
-              "DocumentMoniker": "D:\\work\\Cubic\\Application\\Mappings\\ItemProfile.cs",
-              "RelativeDocumentMoniker": "Application\\Mappings\\ItemProfile.cs",
-              "ToolTip": "D:\\work\\Cubic\\Application\\Mappings\\ItemProfile.cs",
-              "RelativeToolTip": "Application\\Mappings\\ItemProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T21:56:46.069Z"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
