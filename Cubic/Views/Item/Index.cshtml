@@ -1,0 +1,158 @@
+﻿@{
+    ViewBag.SLevel = "Item";
+}
+<link href="~/Content/css/checkboxlist.css" rel="stylesheet" />
+<script src="~/Scripts/plugin/bootstrapvalidator/bootstrapValidator.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<div id="myLoadingElement" class="myLoadingElement" style="display: none;">
+    <img src="~/Content/LoadingImg/Load.gif" />
+</div>
+<div id="main" role="main">
+    <div id="content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <h1 class="page-title txt-color-blueDark">
+                    <i class="glyphicon glyphicon-user"></i>
+                    Items
+                </h1>
+            </div>
+        </div>
+        <section id="widget-grid">
+            <div class="row">
+                <article class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="jarviswidget jarviswidget-color-darken" id="wid-id-666" data-widget-editbutton="false">
+                        <header>
+                            <span class="widget-icon"> <i class="glyphicon glyphicon-user"></i> </span>
+                            <h2></h2>
+                        </header>
+                        <div>
+                            <div class="row">
+                                <div id="_buttons" style="margin-bottom: 29px;margin-left:10px">
+                                    <a href="@Url.Action("Add","Item")" class="btn bg-color-blue txt-color-white"><i class="glyphicon glyphicon-user"></i> Add Item </a>
+                                    <button onclick="Export();" class="btn bg-color-pinkDark txt-color-white"><i class="glyphicon glyphicon-cloud-download"></i> Export</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="widget-body no-padding">
+                                    <div>
+                                        <table id="ItemsTable" class="table table-striped table-bordered" cellspacing="0" style="width: 100%">
+                                            <thead>
+                                                <tr>
+                                                    <th class="hasinput">
+                                                        <input id="Id" type="text" class="form-control" placeholder="Id" />
+                                                    </th>
+                                                    <th class="hasinput">
+                                                        <input id="Name" type="text" class="form-control" placeholder="Name" />
+                                                    </th>
+                                                    <th class="hasinput">
+                                                        <input id="Description" type="text" class="form-control" placeholder="Description" />
+                                                    </th>
+                                                    <th class="hasinput">
+                                                        <input id="IsActive" type="checkbox" class="form-control" placeholder="Active" />
+                                                    </th>
+                                                    <th class="hasinput">
+                                                    </th>
+                                                    <th class="hasinput">
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th><i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i> Name</th>
+                                                    <th><i class="fa fa-fw fa-phone text-muted hidden-md hidden-sm hidden-xs"></i> Description</th>
+                                                    <th><i class="text-muted hidden-md hidden-sm hidden-xs"></i> Active</th>
+                                                    <th><i class="fa fa-fw fa-calendar txt-color-blue hidden-md hidden-sm hidden-xs"></i> Edit</th>
+                                                    <th><i class="fa fa-fw fa-calendar txt-color-blue hidden-md hidden-sm hidden-xs"></i> Delete</th>
+                                                </tr>
+                                            </thead>
+
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+<script>
+
+    $.ajaxSetup({ cache: false });
+    var Class = "<i style='color:red' class='glyphicon glyphicon-remove'></i>";
+    $(document).ready(function () {
+    var oTable = $('#ItemsTable').dataTable({
+    "order": [[0, "asc"]],
+    "searching": true,
+    "cache": false,
+    "sScrollXInner": "100%", "sScrollX": "100%",
+    "bFilter": true,
+    "processing": true,
+    "serverSide": true,
+    "info": true,
+    "lengthMenu": [[10, 20, 50, 100], [10, 20, 50, 100]],
+    "ajax": {
+    "url": "@Url.Action("Load", "Item")",
+    "data":
+    {
+    "count": '@ViewBag.Count'
+    },
+    "type": "Post"
+    },
+
+    "columns": [
+    { "data": "id", "orderable": true, "Searchable": true },
+    { "data": "name", "orderable": true, "Searchable": true },
+    { "data": "description", "orderable": true, "Searchable": true },
+    { "data": "isActive", "orderable": false, "searchable": true },
+    {
+    "data": "Edit", "orderable": false, "visible":true, "render": function (data, type, full, meta) {
+    return '<a href="@Url.Action("Edit", "Item")?Id=' + full.id + '" class="btn bg-color-blue txt-color-white"><i class="glyphicon glyphicon-edit"></i> Edit </a>';
+    }
+    },
+    {
+    "data": "Delete", "orderable": false, "visible":true, "render": function (data, type, full, meta) {
+
+    return '<a href="@Url.Action("Delete", "Item")?Id=' + full.id + '" class="btn bg-color-red txt-color-white" data-title-msg="' + Class + ' Delete ' + full.name + '" data-action="userLogout" data-logout-msg="Are You Sure You Want to Delete This Item ??" ><i class="glyphicon glyphicon-remove"></i> Delete </a>';
+    }
+    }
+    ]
+
+    });
+    $(".dataTables_scrollHead th input").on('keyup change', function () {
+    oTable.fnFilter($(this).val(), $(this).parent().index());
+    });
+    $("#ItemsTable_filter").remove();
+    var proc = $(".dataTables_processing");
+    $("#ItemsTable_wrapper").append(proc[0]);
+    $("#ItemsTable thead th input[type=text]").on('keyup change', function () {
+    oTable.fnFilter($(this).val(), $(this).parent().index());
+    });
+    });
+    function Export() {
+    window.location = "@Url.Action("Export", "Item")" + "?Id=" + $('#Id').val() + "&LoginId=" + $('#LoginId').val() + "&Name=" + $('#Name').val() + "&LoginType=" + $('#AgentType').val();
+    }
+</script>
+
+
+
+<script>
+    var show = true;
+
+    function showCheckboxes() {
+        var checkboxes =
+            document.getElementById("checkBoxes");
+
+        if (show) {
+            checkboxes.style.display = "block";
+            show = false;
+        } else {
+            checkboxes.style.display = "none";
+            show = true;
+        }
+    }
+</script>
+

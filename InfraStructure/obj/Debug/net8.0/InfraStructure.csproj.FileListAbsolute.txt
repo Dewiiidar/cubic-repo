@@ -1,0 +1,17 @@
+D:\work\Cubic\InfraStructure\bin\Debug\net8.0\InfraStructure.deps.json
+D:\work\Cubic\InfraStructure\bin\Debug\net8.0\InfraStructure.runtimeconfig.json
+D:\work\Cubic\InfraStructure\bin\Debug\net8.0\InfraStructure.dll
+D:\work\Cubic\InfraStructure\bin\Debug\net8.0\InfraStructure.pdb
+D:\work\Cubic\InfraStructure\bin\Debug\net8.0\Core.dll
+D:\work\Cubic\InfraStructure\bin\Debug\net8.0\Core.pdb
+D:\work\Cubic\InfraStructure\obj\Debug\net8.0\InfraStructure.csproj.AssemblyReference.cache
+D:\work\Cubic\InfraStructure\obj\Debug\net8.0\InfraStructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\Cubic\InfraStructure\obj\Debug\net8.0\InfraStructure.AssemblyInfoInputs.cache
+D:\work\Cubic\InfraStructure\obj\Debug\net8.0\InfraStructure.AssemblyInfo.cs
+D:\work\Cubic\InfraStructure\obj\Debug\net8.0\InfraStructure.csproj.CoreCompileInputs.cache
+D:\work\Cubic\InfraStructure\obj\Debug\net8.0\InfraStr.570FDCE2.Up2Date
+D:\work\Cubic\InfraStructure\obj\Debug\net8.0\InfraStructure.dll
+D:\work\Cubic\InfraStructure\obj\Debug\net8.0\refint\InfraStructure.dll
+D:\work\Cubic\InfraStructure\obj\Debug\net8.0\InfraStructure.pdb
+D:\work\Cubic\InfraStructure\obj\Debug\net8.0\InfraStructure.genruntimeconfig.cache
+D:\work\Cubic\InfraStructure\obj\Debug\net8.0\ref\InfraStructure.dll

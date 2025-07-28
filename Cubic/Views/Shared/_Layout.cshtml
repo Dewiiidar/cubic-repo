@@ -1,0 +1,424 @@
+﻿
+<!DOCTYPE html>
+@{
+    string SLevel = ViewBag.SLevel;
+}
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title> My-Cubic!  </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+    <!-- #CSS Links -->
+    <!-- Basic Styles -->
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/bootstrap.min.css" />
+
+    <!-- Toastr CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="~/content/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="~/content/css/smartadmin-production-plugins.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="~/content/css/smartadmin-production.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="~/content/css/smartadmin-skins.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="~/content/css/smartadmin-rtl.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="~/content/css/demo.min.css">
+    <link href="~/Scripts/plugin/NewDataTable/buttons.dataTables.min.css" rel="stylesheet" />
+    <link href="~/Content/DataTableStyle/css/dataTables.colReorder.css" rel="stylesheet" />
+    <!-- #FAVICONS -->
+    <link rel="shortcut icon" href="~/IDX.ico" type="~/content/image/x-icon">
+    <link rel="icon" href="~/IDX.ico" type="~/content/image/x-icon">
+    <link href="~/Content/css/fontOpenSans.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" href="~/content/img/splash/sptouch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/content/img/splash/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/content/img/splash/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/content/img/splash/touch-icon-ipad-retina.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-startup-image" href="~/content/img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+    <link rel="apple-touch-startup-image" href="~/content/img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+    <link rel="apple-touch-startup-image" href="~/content/img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+    <style type="text/css">
+        .jcrop-holder #preview-pane {
+            display: block;
+            position: absolute;
+            z-index: 200;
+            right: -280px;
+            padding: 3px;
+            border: 1px rgba(0,0,0,.4) solid;
+            background-color: white;
+            -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        #preview-pane .preview-container {
+            width: 250px;
+            height: 170px;
+            overflow: hidden;
+        }
+
+        .optdual {
+            position: relative;
+        }
+
+            .optdual .offset {
+                position: absolute;
+                left: 18em;
+            }
+
+        .optlist label {
+            width: 16em;
+            display: block;
+        }
+
+        #dl_links {
+            margin-top: .5em;
+        }
+
+        .contentstyle {
+            margin-top: 50px;
+        }
+
+        #sparks li h5 {
+            padding-top: 2px;
+        }
+
+        .btn-default {
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+        }
+
+        .pText {
+            font-size: 18px !important;
+            color: #fafafa;
+        }
+    </style>
+    <script src="@Url.Content("~/Scripts/popper.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery-3.6.0.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/notification/SmartNotification.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.cookie.js")"></script>
+    <link href="~/Content/Loading/css/main.css" rel="stylesheet" />
+    <script src="@Url.Content("~/Content/Loading/js/vendor/modernizr-2.6.2.min.js")"></script>
+    <script src="@Url.Content("~/Content/Loading/js/main.js")"></script>
+    <script src="~/scripts/jquery-migrate-3.0.0.min.js"></script>
+    @RenderSection("Scripts", false)
+</head>
+<body id="body" class="desktop-detected smart-style-2  fixed-header fixed-navigation  fixed-page-footer">
+    <!-- HEADER -->
+    <div id="loader-wrapper" class="loader-wrapper" style="display: none;margin-left:0px">
+        <div id="loader"></div>
+    </div>
+    <header id="header" style="position: fixed; width: 100%; top: 0px;">
+
+        <div id="logo-group" style="background-color: #F7F7F7;">
+            <!-- PLACE YOUR LOGO HERE -->
+            <span>
+                <a href="@Url.Action("Index", "Home")"> <span id="logo"> <img src="" alt="Cubic"> </span> </a>
+            </span>
+
+        </div>
+
+        <div class="project-context hidden-xs">
+            <span class="label"></span>
+            <span class="project-selector" aria-expanded="false">   </span>
+        </div>
+
+
+        <!-- pulled right: nav area -->
+        <div class="pull-right">
+            <div class="project-context hidden-xs">
+                <span style="font-size: 15px;text-transform: capitalize; font-weight: 500; margin-top: 8px;" class="project-selector dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dewi  @*<i class="fa fa-angle-down"></i>*@ </span>
+
+                <!-- Suggestion: populate this list with fetch and push technique -->
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <a onclick="ChangePassword();" data-bs-target="#ModalViewPassword" data-bs-toggle="modal"> Change Password</a>
+                    </li>
+
+                </ul>
+
+                <!-- end dropdown-menu-->
+
+            </div>
+            <!-- collapse menu button -->
+            <div id="hide-menu" class="btn-header pull-right">
+                <span> <a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu"><i class="fa fa-reorder"></i></a> </span>
+            </div>
+
+
+            <!-- logout button -->
+            <div id="logout" class="btn-header transparent pull-right">
+                <span> <a href="#" data-title-msg="" data-action="userLogout" data-logout-msg="are you sure you want to log out ??"><i class="fa fa-sign-out"></i></a> </span>
+            </div>
+            <!-- end logout button -->
+            <!-- search mobile button (this is hidden till mobile view port) -->
+            <div id="search-mobile" class="btn-header transparent pull-right">
+                <span> <a href="javascript:void(0)" title="Search"><i class="fa fa-search"></i></a> </span>
+            </div>
+            <!-- end search mobile button -->
+            <!-- fullscreen button -->
+            <div id="fullscreen" class="btn-header transparent pull-right">
+                <span onclick="FullScreen();"> <a href="#" data-action="launchFullscreen" title="Full Screen"><i class="fa fa-arrows-alt"></i></a> </span>
+            </div>
+
+        </div>
+    </header>
+
+    <aside id="left-panel">
+        <nav class="nav">
+            <ul>
+                <li class="open active">
+                    <a href="#"><i class="fa fa-lg fa-fw fa-cog"></i> <span class="menu-item-parent">Admin</span></a>
+                    <ul style="display:block;">
+                        <li class=@(SLevel == "Home" ? "active" : "")>
+                            <a href="/Home"><i class="fa fa-user"></i> Home</a>
+                        </li>
+                        <li class=@(SLevel == "Item" ? "active" : "")>
+                            <a href="/Item"><i class="fa fa-user"></i> Items</a>
+                        </li>
+                        <li class=@(SLevel == "Price" ? "active" : "")>
+                            <a href="/Price"><i class="fa fa-user"></i> Prices</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+        <span onclick="ChangeMenue();" class="minifyme" data-action="minifyMenu">
+            <i class="fa fa-arrow-circle-left hit"></i>
+        </span>
+
+    </aside>
+    @RenderBody()
+
+    <div class="page-footer" id="footerDiv">
+        <div class="row">
+        </div>
+    </div>
+    <div class="modal" id="ModalViewPassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" id="ChangePass" style="width: 50%">
+        </div>
+    </div>
+    <style>
+        .chatscrolly {
+            float: left;
+            height: 170px;
+            overflow-y: scroll;
+        }
+    </style>
+    <script src="@Url.Content("~/Scripts/app.config.js")"></script>
+
+    <!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+    <script src="~/scripts/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @*<script src="~/Scripts/bootstrap/bootstrap.min.js"></script>*@
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/smartwidgets/jarvis.widget.min.js"></script>
+    <script src="~/Scripts/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+    <script src="~/Scripts/plugin/sparkline/jquery.sparkline.min.js"></script>
+    <script src="~/Scripts/plugin/masked-input/jquery.maskedinput.min.js"></script>
+    <script src="~/Scripts/plugin/select2/select2.min.js"></script>
+    <script src="~/Scripts/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+    <script src="~/Scripts/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+    <script src="~/Scripts/plugin/fastclick/fastclick.min.js"></script>
+    <script src="@Url.Content("~/Scripts/app.min.js")"></script>
+    <script src="~/Scripts/speech/voicecommand.min.js"></script>
+    <script src="~/Scripts/plugin/NewDataTable/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/plugin/datatables/dataTables.colVis.min.js"></script>
+    <script src="~/Scripts/plugin/NewDataTable/dataTables.buttons.min.js"></script>
+    <script src="~/Scripts/plugin/NewDataTable/jszip.min.js"></script>
+    <script src="~/Scripts/plugin/NewDataTable/pdfmake.min.js"></script>
+    <script src="~/Scripts/plugin/NewDataTable/vfs_fonts.js"></script>
+    <script src="~/Scripts/plugin/NewDataTable/buttons.html5.min.js"></script>
+    <script src="~/Scripts/plugin/NewDataTable/buttons.colVis.min.js"></script>
+    <script src="~/Scripts/plugin/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="~/Scripts/plugin/datatable-responsive/datatables.responsive.min.js"></script>
+    <script src="~/Scripts/plugin/datatables/dataTables.colReorder.min.js"></script>
+
+
+    <script src="~/Scripts/plugin/bootstrap-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+
+    <script src="~/Scripts/plugin/jcrop/jquery.color.min.js"></script>
+    <script src="~/scripts/plugin/maxlength/bootstrap-maxlength.min.js"></script>
+
+
+
+
+    <script type="text/javascript">
+        $.ajaxSetup({
+            cache: false
+        });
+        $("#content").addClass("contentstyle");
+        $(document).ready(function () {
+
+            pageSetUp();
+        });
+    </script>
+</body>
+
+
+
+</html>
+@if (TempData["Success"] != null)
+{
+    <script>
+        $(document).ready(function () {
+            $.smallBox({
+            title: "Success",
+            content: '@TempData["Success"]',
+            color: "rgb(115, 158, 115)",
+            timeout: 8000,
+            icon: "fa fa-bell swing animated"
+            });
+        });
+    </script>
+}
+else if (TempData["Error"] != null)
+{
+    <script>
+        $(document).ready(function () {
+            $.smallBox({
+                title: "Failed",
+                content: '@TempData["Error"]',
+                color: "#b94a48",
+                timeout: 8000,
+                icon: "fa fa-bell swing animated"
+            });
+        });
+    </script>
+}
+
+<script>
+    // Opera 8.0+
+    var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+    // Firefox 1.0+
+    var isFirefox = typeof InstallTrigger !== 'undefined';
+
+    // Safari 3.0+ "[object HTMLElementConstructor]"
+    var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+
+    // Internet Explorer 6-11
+    var isIE = false || !!document.documentMode;
+    if (isIE) {
+        location.replace(window.location.href + "/NotCompatible");
+    }
+    // Edge 20+
+    var isEdge = !isIE && !!window.StyleMedia;
+
+    // Chrome 1 - 71
+    var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+
+    // Blink engine detection
+    var isBlink = (isChrome || isOpera) && !!window.CSS;
+</script>
+<script type="text/javascript">
+        function ChangePassword() {
+            var url = '@Url.Action("Index", "ChangePassword")';
+            $("#ChangePass").load(url);
+        }
+
+        function ChangeMenue() {
+            if ($('#body').hasClass("minified")) {
+                $.cookie("MenueStyle", 0);
+            }
+            else {
+                $.cookie("MenueStyle", 1);
+            }
+        }
+        function AlertSuccess(msg) {
+            $.smallBox({
+                title: "Success",
+                content: "<p style='color:white'>" + msg + "</p>",
+                color: "rgb(115, 158, 115)",
+                timeout: 8000,
+                icon: "fa fa-bell swing animated"
+            });
+        }
+        function AlertError(msg) {
+            $.smallBox({
+                title: "Failed",
+                content: "<p style='color:white'>" + msg + "</p>",
+                color: "#b94a48",
+                timeout: 8000,
+                icon: "fa fa-bell swing animated"
+            });
+        }
+        $(document).on("keydown", function (e) {
+            if (e.which === 8 && !$(e.target).is("input, textarea")) {
+                e.preventDefault();
+            }
+        });
+
+        window.onload = function () { // When the page has finished loading.
+            $(".nested").each(function () { // Check every "nested" class
+                if ($(this).children().length == 0) { // If this nested class has no children
+                    //$("#ReportsList").hide(); // This will hide it, but not alter the layout
+                    // $(this).css("display", "none"); // This will alter the layout
+                    $(this).parent().hide();
+                } else {
+                   // $("#ReportsList").show();
+                    //$(this).css("display", "none"); // This will alter the layout
+                }
+            }
+            );
+    }
+</script>
+<script type="text/javascript">
+    function ExecuteAction(URL, _data) {
+        var res = "";
+        $.ajax({
+            url: URL,
+            data: _data,
+            cache: false,
+            type: "GET",
+            async: false,
+            success: function (data) {
+                res = data;
+            },
+            error: function () {
+                location.reload();
+            }
+        });
+        return res;
+    }
+
+    $(document).on("click", ".serverurl", function () {
+        var _url = '@Url.Action("serverurl", "Home")';
+
+        var serverurl = $(this).attr("data-link");
+        alert(serverurl);
+
+
+        $.ajax({
+            url: _url,
+            data: {},
+            cache: false,
+            type: "GET",
+            async: false,
+            success: function (data) {
+                alert(serverurl + data);
+                window.open(serverurl + data, "_blank");
+            },
+            error: function (error) {
+                AlertError(error);
+            }
+        });
+    });
+    $(document).ready(function () {
+        // var path = window.location.pathname.substring(1);
+        var path = window.location.pathname;
+        // $('.nav>li>a[href="' + path + '"]').parent().addClass('active');
+        $('a[href="' + path + '"]').parent().addClass('active');
+        $('a[href="' + path + '"]').parent().parent().css("display","block");
+        //display: block;
+    });
+</script>
+
+

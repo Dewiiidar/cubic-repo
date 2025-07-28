@@ -1,0 +1,15 @@
+D:\work\Cubic\Application\bin\Debug\net8.0\Application.deps.json
+D:\work\Cubic\Application\bin\Debug\net8.0\Application.dll
+D:\work\Cubic\Application\bin\Debug\net8.0\Application.pdb
+D:\work\Cubic\Application\bin\Debug\net8.0\Core.dll
+D:\work\Cubic\Application\bin\Debug\net8.0\Core.pdb
+D:\work\Cubic\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
+D:\work\Cubic\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\Cubic\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
+D:\work\Cubic\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
+D:\work\Cubic\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+D:\work\Cubic\Application\obj\Debug\net8.0\Applicat.44B5EDA2.Up2Date
+D:\work\Cubic\Application\obj\Debug\net8.0\Application.dll
+D:\work\Cubic\Application\obj\Debug\net8.0\refint\Application.dll
+D:\work\Cubic\Application\obj\Debug\net8.0\Application.pdb
+D:\work\Cubic\Application\obj\Debug\net8.0\ref\Application.dll
